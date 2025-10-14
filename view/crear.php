@@ -116,7 +116,7 @@
         estado: document.querySelector("#estado").value
       };
 
-      fetch("../../controller/AnimeController.php", {
+      fetch("/controller/AnimeController.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)

@@ -119,7 +119,7 @@
           cancelButtonText: "Cancelar"
         }).then((result) => {
           if (result.isConfirmed) {
-            fetch(`../controller/AnimeController.php/${idanime}`, {
+            fetch(`/controller/AnimeController.php/${idanime}`, {
               method: 'DELETE'
             })
               .then(response => response.json())

@@ -98,7 +98,7 @@
       const idAnime = urlParams.get("id");
 
       // Cargar datos actuales del anime
-      fetch(`../../controller/AnimeController.php?task=getById&id=${idAnime}`)
+      fetch(`/controller/AnimeController.php?task=getById&id=${idAnime}`)
         .then(res => res.json())
         .then(data => {
           if (data.length > 0) {
@@ -141,7 +141,7 @@
           cancelButtonText: 'Cancelar'
         }).then((result) => {
           if (result.isConfirmed) {
-            fetch('../../controller/AnimeController.php', {
+            fetch('/controller/AnimeController.php', {
               method: 'PUT',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
