@@ -70,7 +70,7 @@
   const tabla = document.querySelector("#tabla-animes tbody");
 
   function obtenerDatos() {
-    fetch(`../controller/AnimeController.php?task=getAll`)
+    fetch(`/controller/AnimeController.php?task=getAll`)
       .then(response => response.json())
       .then(data => {
         tabla.innerHTML = '';
