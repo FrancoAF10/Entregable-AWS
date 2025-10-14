@@ -15,7 +15,7 @@
                         <h3 class="mb-0 fw-bold">Mi Crud de Anime</h3>
                     </div>
                     <div class="card-body text-center p-5">
-                        <a href="/listar.php" class="btn btn-primary btn-lg px-5 py-3">
+                        <a href="view/listar.php" class="btn btn-primary btn-lg px-5 py-3">
                             <i class="bi bi-list-ul"></i> Ver lista de animes
                         </a>
                     </div>
