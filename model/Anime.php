@@ -10,7 +10,7 @@ class Anime{
    * @return array
    */
   public function getAll(): array{
-    $sql="SELECT * FROM ANIME";
+    $sql="SELECT * FROM ANIMES";
     $stmt = $this->conexion->prepare($sql); //preparación
     $stmt->execute(); //ejecución
     return $stmt->fetchAll(PDO::FETCH_ASSOC); //retorno
@@ -22,7 +22,7 @@ class Anime{
    * @return int
    */
   public function add($params = []): int{
-   $sql="INSERT INTO ANIME (nombre,genero,episodios,puntuacion,estado) VALUES(?,?,?,?,?)";
+   $sql="INSERT INTO ANIMES (nombre,genero,episodios,puntuacion,estado) VALUES(?,?,?,?,?)";
    $stmt = $this->conexion->prepare($sql);
    $stmt->execute(
     array(
@@ -36,7 +36,7 @@ class Anime{
     return $stmt->rowCount();
   }
   public function update($params = []): int{
-    $sql = "UPDATE ANIME SET nombre = ?,genero = ?,episodios = ?,puntuacion = ?,estado = ? WHERE id = ?";
+    $sql = "UPDATE ANIMES SET nombre = ?,genero = ?,episodios = ?,puntuacion = ?,estado = ? WHERE id = ?";
     $stmt = $this->conexion->prepare($sql);
     $stmt->execute([
         $params["nombre"],
@@ -49,7 +49,7 @@ class Anime{
     return $stmt->rowCount();  
   }
   public function delete($params = []): int{
-    $sql= "DELETE FROM ANIME WHERE id=? ";
+    $sql= "DELETE FROM ANIMES WHERE id=? ";
     $stmt = $this->conexion->prepare($sql);
     $stmt->execute(
       array(
@@ -61,7 +61,7 @@ class Anime{
   }
   public function getById ($id): array{
     //obtenemos los datos mediante el id
-    $sql= "SELECT * FROM ANIME WHERE id=?";
+    $sql= "SELECT * FROM ANIMES WHERE id=?";
     $stmt = $this->conexion->prepare($sql);
     $stmt->execute(
       array($id)
