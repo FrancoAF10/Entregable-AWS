@@ -7,6 +7,6 @@
 </head>
 <body>
      <h3>Mi Crud</h3>
-    <a href="views/listar.php">Ver lista de animes</a>
+    <a href="view/listar.php">Ver lista de animes</a>
 </body>
 </html>

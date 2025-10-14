@@ -35,7 +35,6 @@
 </head>
 
 <body>
-  <?php include_once(__DIR__ . '/../../layouts/navbar.php'); ?>
 
   <div class="container my-5">
     <div class="d-flex justify-content-between align-items-center mb-3">

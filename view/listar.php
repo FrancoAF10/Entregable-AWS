@@ -25,8 +25,6 @@
 </head>
 <body>
 
-<?php include_once(__DIR__ . '/../../layouts/navbar.php'); ?>
-
 <div class="container my-5">
   <h2 class="text-center text-primary mb-4">Gestión de Animes</h2>
   
